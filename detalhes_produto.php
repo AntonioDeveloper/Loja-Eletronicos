@@ -78,7 +78,7 @@
                <h3>Geladeira Brastemp</h3>
                <h2>R$ 5000,00</h2>
                 <br /> 
-                <ul>
+                <ul style="list-style-type: none;">
                   <li>
                     <a href="#" class="active"> 
                       <span>Categoria</span> : Eletroeletrônicos
@@ -99,21 +99,61 @@
                 <br>
                 <form>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Quantidade</label>
+                    <!-- <label for="exampleFormControlSelect1">Quantidade</label>
                     <select class="form-control" id="exampleFormControlSelect1">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
                       <option>4</option>
                       <option>5</option>
-                    </select>
+                    </select> -->
                   </div>
-                  <button type="button" class="btn btn-success">Comprar</button>                  
+                  <button type="button" class="btn btn-success" 
+                    data-toggle="modal" data-target="#exampleModal">
+                    Comprar
+                  </button>                  
                 </form>
             </div>
         </div>
       </section>
     <!-- Fim Produto -->
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body px-2">
+        <form id='frm1' action="cadastro_pedidos.php" method="post" class="px-5">
+          <label for='name'>Nome:</label><br>
+          <input type="text" style="width: 400px" id='name' name='name'/> <br><br>
+          <label for='end'>Endereço:</label><br>
+          <input type="text" style="width: 400px" id='end' name='end'/> <br><br>
+          <label for='phone'>Telefone:</label><br>
+          <input id='phone' type='number' name='phone'> <br><br>
+        <!--  <label for='email'>Email:</label>
+          <input id='email' type='text' name='email'><br><br>
+          -->
+          <label for='id_prod'>id Prod:</label><br>
+          <input id='id_prod' type='number' name='id_prod'><br><br>
+          <label for='nome_prod'>Nome Prod:</label><br>
+          <input type='text' name='nome_prod'><br><br>
+          <label for='val_unit'>Valor Unitário:</label><br>
+          <input type='number' name='val_unit'><br><br>
+          <label for='quantidade'>Quantidade:</label><br>
+          <input type='number' name='quantidade'><br><br>
+          <input type="submit" class="btn btn-primary" value="Enviar" id="enviar" /><br><br>        
+        </form>
+      </div>      
+    </div>
+  </div>
+</div>
 
     <!-- Descrição do Produto -->
     <div class="container-fluid">

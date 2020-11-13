@@ -6,67 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastre-se - Full Stack Eletro</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />  
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 
   <body>
-    <!-- Início do menu -->
-    <nav class="menu">
-      <a href="index.php">
-        <img src="./imagens/logo.gif" alt="logo da loja" width="100px" />
-      </a>
 
-      <a href="produtos.php"> Produtos </a>
-
-      <a href="lojas.php"> Nossas Lojas </a>
-
-      <a href="contato.php"> Contato </a>
-
-      <a href="cadastro.php"> Cadastre-se </a>
-
-      <a href="consultas_gerais.php"> Consultas Gerais</a>
-    </nav>
-    <!-- Fim do menu -->
-
-    <header>
-      <h2>Cadastre-se</h2>
-    </header>
-    <hr />
-
-    <!-- Formulário -->
-
-    <div class="formulario">
-      <form id='frm1' action="cadastro_clientes.php" method="post">
-        <label for='name'>Nome:</label>
-        <input type="text" style="width: 400px" id='name' name='name'/> <br><br>
-        <label for='end'>Endereço:</label>
-        <input type="text" style="width: 400px" id='end' name='end'/> <br><br>
-        <label for='phone'>Telefone:</label>
-        <input id='phone' type='number' name='phone'> <br><br>
-      <!--  <label for='email'>Email:</label>
-        <input id='email' type='text' name='email'><br><br>
-        -->
-        <label for='id_prod'>id Prod:</label>
-        <input id='id_prod' type='number' name='id_prod'><br><br>
-        <label for='nome_prod'>Nome Prod:</label>
-        <input nome='nome_prod' type='text' name='nome_prod'><br><br>
-        <label for='val_unit'>Valor Unitário:</label>
-        <input nome='val_unit' type='number' name='val_unit'><br><br>
-        <label for='quantidade'>Quantidade:</label>
-        <input nome='quantidade' type='number' name='quantidade'><br><br>
-        
-        <br><br>
-        <input type="submit" value="Enviar" id="enviar" /><br><br>        
-      </form>
+  <main class="container-fluid d-flex flex-column justify-content-center"  style="background-image: url('./imagens/porta.jpg'); background-repeat: no-repeat;
+      background-size: cover; height: 100vh;">
+  <div class="jumbotron col-lg-5 col-md-8 col-sm-9 mx-auto py-2 form-group" style="min-height: 700px;">
+      <h3 style="text-align: center;">Cadastre-se</h3>  
+      <form action="cadastro_clientes.php" method="post">
+        <div class="form-group">
+            <label for='name'>Nome:</label><br>
+            <input type="text" style="width: 400px" id='name' name='name'/> <br><br>
+            <label for='end'>Endereço:</label><br>
+            <input type="text" style="width: 400px" id='end' name='end'/> <br><br>
+            <label for='phone'>Telefone:</label><br>
+            <input id='phone' type='number' name='phone'> <br><br>
+            <label for='email''>Email:</label><br>
+            <input id='email'' type='email' name='email''><br><br>
+            <label for='foto'>Foto:</label><br>
+            <input type="url" name="foto"><br><br>
+            <label for='senha'>Digite uma senha:</label><br>
+            <input type="password" name="senha"><br><br>
+            <label for='conf_senha'>Confirme sua senha:</label><br>
+            <input type="password" name="conf_senha"><br><br>
+            <input class="btn btn-primary btn-lg" type="submit" value="Enviar" id="enviar" /><br><br>        
+        </div>
+      </form>          
     </div>
+  </main>    
 
-    <!-- Formulário -->
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-    <footer class="rodape">
-      <h4>Formas de Pagamento</h4>
-      <img src="./imagens/f-pagamento.jpg" alt="formas de pagamento" />
-      <p>&copy 2020 Recode Pro.</p>
-    </footer>    
+     <!-- JS Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
   </body>
 </html>
+
