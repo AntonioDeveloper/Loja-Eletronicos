@@ -41,19 +41,6 @@ body {
   cursor: pointer;
 }
 
-/*
-.produtos {
-  width: 70%;
-  float: right;
-}
-
-.box_produto {
-  display: inline-block;
-  width: 20%;
-  margin: 10px;
-}
-*/
-
 .endereco {
   display: inline-block;
   width: 20%;
@@ -118,6 +105,10 @@ body {
 
 #bg-contatos {
   background-color: #b5faa7;
+}
+
+.janela-dados {
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 729px) {
