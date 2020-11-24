@@ -13,4 +13,5 @@ Ainda há o que melhorar mas, no momento, esse é o resultado.
 
 <img src="https://github.com/AntonioDeveloper/Loja-Eletronicos/blob/master/login.png">
 <img src="https://github.com/AntonioDeveloper/Loja-Eletronicos/blob/master/home.png">
+<img src="https://github.com/AntonioDeveloper/Loja-Eletronicos/blob/master/produtos.png">
 <img src="https://github.com/AntonioDeveloper/Loja-Eletronicos/blob/master/lista-pedidos.png">
