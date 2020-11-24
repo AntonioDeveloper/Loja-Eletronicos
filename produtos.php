@@ -48,7 +48,7 @@
       <header>
         <h1>Produtos</h1>
       </header>
-      <hr />
+      <hr />      
 
     <div class="row">
       <div class="col-xl-12 text-center">
@@ -64,52 +64,52 @@
         </div>
       </div>
 
-        <!-- Início da seção de produtos -->
+        <!-- Início da seção de produtos -->    
+
         <section class="container">
           <div class="row" style="text-align: center;">
-            <div class="col-lg-3 col-md-3 col-sm-6 mt-4 mb-4">
-                <img src="./imagens/geladeira.jpg" alt="geladeira" width="120px" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)" onmouseout="tirarDestaque(this)"/>
+
+            <?php
+
+          $conn = mysqli_connect("localhost", "root", "", "fstackeletro");
+
+          // if(!$conn){
+          //   die("Conexão morreu" .mysqli_connect_errno());
+          // } else {
+          //   echo "Sucesso na conexão!!";
+          // }
+
+          $sel = "select * from produto";
+          $res = mysqli_query($conn, $sel);
+         
+
+          if($res -> num_rows > 0){         
+
+            while($row = $res -> fetch_assoc()){
+
+              ?>
+
+              <div class="col-lg-3 col-md-3 col-sm-6 mt-4 mb-4">
+                <img src="<?php echo $row['nome_imagem'];?>" alt="<?php echo $row['descricao']; ?>" width="120px" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)" onmouseout="tirarDestaque(this)"/>
                 <br />
-                Geladeira Frost Free Brastemp Side Inverse 540 litros
+                <?php echo $row['descricao']; ?>
                 <hr />
                 <strike>R$ 6.389,00</strike><br />
-                R$ 5.019,00
+                <?php echo $row['preco']; ?>
                 <br />
                 <a href="detalhes_produto.php" class="btn btn-success mt-2 mb-2" >Comprar</a>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 mt-4 mb-4">
-                <img src="./imagens/geladeira.jpg" alt="geladeira" width="120px" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)" onmouseout="tirarDestaque(this)"/>
-                <br />
-                Geladeira Frost Free Brastemp Side Inverse 540 litros
-                <hr />
-                <strike>R$ 6.389,00</strike><br />
-                R$ 5.019,00
-                <br />
-                <a href="detalhes_produto.php" class="btn btn-success mt-2 mb-2" >Comprar</a>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 mt-4 mb-4">
-                <img src="./imagens/geladeira.jpg" alt="geladeira" width="120px" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)" onmouseout="tirarDestaque(this)"/>
-                <br />
-                Geladeira Frost Free Brastemp Side Inverse 540 litros
-                <hr />
-                <strike>R$ 6.389,00</strike><br />
-                R$ 5.019,00
-                <br />
-                <a href="detalhes_produto.php" class="btn btn-success mt-2 mb-2" >Comprar</a>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 mt-4 mb-4">
-                <img src="./imagens/geladeira.jpg" alt="geladeira" width="120px" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)" onmouseout="tirarDestaque(this)"/>
-                <br />
-                Geladeira Frost Free Brastemp Side Inverse 540 litros
-                <hr />
-                <strike>R$ 6.389,00</strike><br />
-                R$ 5.019,00
-                <br />
-                <a href="detalhes_produto.php" class="btn btn-success mt-2 mb-2" >Comprar</a>
-            </div>
-              
+
+            <?php
+
+              }               
+            } else{
+              echo "Não há produtos nesta categoria.";
+            }
+
+            ?> 
       
-        </div>
+          </div>
         <!-- Fim da seção de produtos -->
       </section>
 
