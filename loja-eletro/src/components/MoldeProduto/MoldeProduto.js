@@ -4,7 +4,7 @@ export default function MoldeProduto(props){
  return (
     <>
      <div className="col-lg-3 col-md-3 col-sm-6 mt-4 mb-4">
-       <img src={require(`${props.imagem}`).default} alt="Foto do Produto" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)" />
+       <img src={require(`../../imagens/${props.imagem}`).default} alt="Foto do Produto" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)" />
        <br />
        <p> 
          {props.descricao}
