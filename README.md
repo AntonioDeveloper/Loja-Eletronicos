@@ -4,6 +4,7 @@ Projeto realizado na formação para desenvolvedores fullstack da [Recode Pro](h
 A ideia é montar, no decorrer do curso, uma loja virtual utilizando: <br>
 - HTML
 - CSS (com Bootstrap)
+- React
 - Javascript
 - MySQL
 - PHP
